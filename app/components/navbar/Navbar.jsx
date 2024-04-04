@@ -25,7 +25,7 @@ const Navbar = ({ currentUser }) => {
           "
           >
             <Logo />
-            <Search />
+            {/* <Search /> */}
             <UserMenu currentUser={currentUser} />
           </div>
         </Container>

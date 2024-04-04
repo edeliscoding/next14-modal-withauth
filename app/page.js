@@ -3,8 +3,8 @@ import Container from "@/app/components/Container";
 import ListingCard from "./components/listings/ListingCard";
 import getListings from "./actions/getListings";
 import getCurrentUser from "./actions/getCurrentUser";
-export default async function Home({ searchParams }) {
-  const listings = await getListings(searchParams);
+export default async function Home() {
+  const listings = await getListings();
   const currentUser = await getCurrentUser();
   // console.log(currentUser);
   return (
@@ -20,8 +20,6 @@ export default async function Home({ searchParams }) {
     2xl:grid-cols-6
     gap-8"
       >
-        {/* <h1>My Modal Project with Next AUthentication</h1> */}
-
         {listings.map((listing) => (
           <ListingCard
             currentUser={currentUser}
